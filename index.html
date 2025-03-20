@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ella's website</title>
+    <link rel="stylesheet" href="https://use.typekit.net/wda3tvm.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: "condor-extended", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+        .text-container {
+            position: absolute;
+            top: 25%;
+            left: 2%;
+            transform: translateY(-50%);
+            text-align: left;
+            color: rgb(0, 0, 0);
+            font-size: 80px;
+            font-family: "condor-extended", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+        .link-container {
+            position: absolute;
+            top: 75%;
+            right: 2%;
+            text-align: left;
+            font-family: "condor-extended", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+        h1, .link-container h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 80px;
+            line-height: 1.2;
+        }
+        .link-container a {
+            text-decoration: none;
+            display: inline-block;
+        }
+        .link-container .hover-image {
+            position: relative;
+            display: inline-block;
+            width: 1150px;
+            height: auto;
+        }
+        .link-container .hover-image img.default-image {
+            display: block;
+            width: 1150px;
+            height: auto;
+            position: relative;
+            z-index: 2;
+            mix-blend-mode: overlay;
+        }
+        .link-container .hover-image img.hover-image {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1150px;
+            height: auto;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 2;
+            mix-blend-mode: overlay;
+        }
+        .link-container .hover-image:hover img.default-image {
+            opacity: 0;
+        }
+        .link-container .hover-image:hover img.hover-image {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <h1>welcome to pretty<br>publications</h1>
+    </div>
+    <div class="link-container">
+        <h1>
+            <a href="universe.html">
+                <div class="hover-image">
+                    <img class="default-image" src="1.png" alt="enter my universe">
+                    <img class="hover-image" src="2_vit_genomskinlig.png" alt="enter my universe">
+                </div>
+            </a>
+        </h1>
+    </div>
+</body>
+</html>

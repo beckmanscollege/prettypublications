@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>favorites</title>
+    <link rel="stylesheet" href="https://use.typekit.net/wda3tvm.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+        .favorites-container {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-left: 50px;
+        }
+        .favorites-image {
+            height: 100%;
+            width: auto;
+            position: relative;
+        }
+        .hover-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: "condor-extended", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+            font-size: 35px;
+            color: black;
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+            pointer-events: none;
+            z-index: 1;
+            text-align: left;
+            width: 1000px;
+            padding: 20px;
+            text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+        }
+        .favorites-image:hover + .hover-text {
+            opacity: 1;
+        }
+        .back-container {
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            width: auto;
+            height: calc((100vh - 70px) / 13);
+            z-index: 2;
+        }
+        .back-image {
+            width: auto;
+            height: 100%;
+            opacity: 1;
+            transition: ease-out 0.3s;
+        }
+        .back-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: 100%;
+            opacity: 0;
+            transition: ease-out 0.3s;
+        }
+        .back-container:hover .back-image {
+            opacity: 0;
+        }
+        .back-container:hover .back-hover {
+            opacity: 1;
+        }
+        .next-container {
+            position: fixed;
+            bottom: 0%;
+            right: 0%;
+            width: auto;
+            height: calc((100vh - 70px) / 13);
+            z-index: 2;
+        }
+        .next-image {
+            width: auto;
+            height: 100%;
+            opacity: 1;
+            transition: ease-out 0.3s;
+        }
+        .next-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: 100%;
+            opacity: 0;
+            transition: ease-out 0.3s;
+        }
+        .next-container:hover .next-image {
+            opacity: 0;
+        }
+        .next-container:hover .next-hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="favorites-container">
+        <img src="f_1.png" alt="favorites" class="favorites-image">
+        <div class="hover-text">love the black and white</div>
+    </div>
+
+    <a href="universe.html" class="back-container">
+        <img src="back.png" alt="back" class="back-image">
+        <img src="back_r.png" alt="back" class="back-hover">
+    </a>
+
+    <a href="f_1.html" class="next-container">
+        <img src="next.png" alt="next" class="next-image">
+        <img src="next_r.png" alt="next" class="next-hover">
+    </a>
+</body>
+</html> 

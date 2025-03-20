@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ella's universe</title>
+    <link rel="stylesheet" href="https://use.typekit.net/wda3tvm.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        .background-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('gif.gif');
+            background-size: 100%;
+            z-index: 1;
+        }
+       
+        .text-item {
+            font-size: 40px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            color: rgb(0, 0, 0);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        .year-container {
+            position: absolute;
+            bottom: 22%;
+            left: 1%;
+            text-align: left;
+        }
+        .year-container .hover-image {
+            position: relative;
+            display: inline-block;
+            width: 80%;
+            height: auto;
+        }
+        .year-container .hover-image img.default-image {
+            display: block;
+            width: 80%;
+            height: auto;
+            position: relative;
+            z-index: 2;
+            mix-blend-mode: overlay;
+        }
+        .year-container .hover-image img.hover-image {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: auto;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .year-container .hover-image:hover img.default-image {
+            opacity: 0;
+        }
+        .year-container .hover-image:hover img.hover-image {
+            opacity: 0.8;
+        }
+        .motive-container {
+            position: absolute;
+            bottom: 12%;
+            left: 2%;
+            text-align: left;
+        }
+        .motive-container .hover-image {
+            position: relative;
+            display: inline-block;
+            width: 80%;
+            height: auto;
+        }
+        .motive-container .hover-image img.default-image {
+            display: block;
+            width: 80%;
+            height: auto;
+            position: relative;
+            z-index: 2;
+            mix-blend-mode: overlay;
+        }
+        .motive-container .hover-image img.hover-image {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: auto;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .motive-container .hover-image:hover img.default-image {
+            opacity: 0;
+        }
+        .motive-container .hover-image:hover img.hover-image {
+            opacity: 0.8;
+        }
+        .favorites-container {
+            position: absolute;
+            bottom: 2%;
+            left: 2%;
+            text-align: left;
+        }
+        .favorites-container .hover-image {
+            position: relative;
+            display: inline-block;
+            width: 80%;
+            height: auto;
+        }
+        .favorites-container .hover-image img.default-image {
+            display: block;
+            width: 80%;
+            height: auto;
+            position: relative;
+            z-index: 2;
+            mix-blend-mode: overlay;
+        }
+        .favorites-container .hover-image img.hover-image {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: auto;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .favorites-container .hover-image:hover img.default-image {
+            opacity: 0;
+        }
+        .favorites-container .hover-image:hover img.hover-image {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container"></div>
+    <div class="text-container">
+    </div>
+    <div class="year-container">
+        <a href="year.html">
+            <div class="hover-image">
+                <img class="default-image" src="year_2.png" alt="year">
+                <img class="hover-image" src="year_1.png" alt="year">
+            </div>
+        </a>
+    </div>
+    <div class="motive-container">
+        <a href="motive.html">
+            <div class="hover-image">
+                <img class="default-image" src="motive_2.png" alt="motive">
+                <img class="hover-image" src="motive_1.png" alt="motive">
+            </div>
+        </a>
+    </div>
+    <div class="favorites-container">
+        <a href="favorites.html">
+            <div class="hover-image">
+                <img class="default-image" src="favorites_2.png" alt="favorites">
+                <img class="hover-image" src="favorites_1.png" alt="favorites">
+            </div>
+        </a>
+    </div>
+</body>
+</html>

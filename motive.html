@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>motive</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+        .motive-container {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .motive-item {
+            position: relative;
+            width: auto;
+            height: calc((100vh - 70px) / 12);
+        }
+        .motive-image {
+            width: auto;
+            height: 100%;
+            opacity: 1;
+            transition: ease-out 0.3s;
+        }
+        .motive-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: 100%;
+            opacity: 0;
+            transition: ease-out 0.3s;
+        }
+        .motive-item:hover .motive-image {
+            opacity: 0;
+        }
+        .motive-item:hover .motive-hover {
+            opacity: 1;
+        }
+        .popup-container {
+            position: fixed;
+            left: 70%;
+            top: 5%;
+            height: 90%;
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            z-index: 1;
+        }
+        .popup-image {
+            height: 100%;
+            width: auto;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        #close-up:hover ~ .popup-container .popup-image:nth-child(1),
+        #collage:hover ~ .popup-container .popup-image:nth-child(2),
+        #community:hover ~ .popup-container .popup-image:nth-child(3),
+        #editorial:hover ~ .popup-container .popup-image:nth-child(4),
+        #everyday:hover ~ .popup-container .popup-image:nth-child(5),
+        #food:hover ~ .popup-container .popup-image:nth-child(6),
+        #furniture:hover ~ .popup-container .popup-image:nth-child(7),
+        #graphic:hover ~ .popup-container .popup-image:nth-child(8),
+        #illustration:hover ~ .popup-container .popup-image:nth-child(9),
+        #portrait:hover ~ .popup-container .popup-image:nth-child(10),
+        #road:hover ~ .popup-container .popup-image:nth-child(11),
+        #typography:hover ~ .popup-container .popup-image:nth-child(12) {
+            opacity: 1;
+        }
+        .back-container {
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            width: auto;
+            height: calc((100vh - 70px) / 13);
+            z-index: 2;
+        }
+        .back-image {
+            width: auto;
+            height: 100%;
+            opacity: 1;
+            transition: ease-out 0.3s;
+        }
+        .back-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: 100%;
+            opacity: 0;
+            transition: ease-out 0.3s;
+        }
+        .back-container:hover .back-image {
+            opacity: 0;
+        }
+        .back-container:hover .back-hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="motive-container">
+        <div class="motive-item" data-popup="0">
+            <img src="motive_close-up.png" alt="close-up" class="motive-image">
+            <img src="motive_close-up_r.png" alt="close-up" class="motive-hover">
+        </div>
+        <div class="motive-item" data-popup="1">
+            <img src="motive_collage.png" alt="collage" class="motive-image">
+            <img src="motive_collage_r.png" alt="collage" class="motive-hover">
+        </div>
+        <div class="motive-item" data-popup="2">
+            <img src="motive_community.png" alt="community" class="motive-image">
+            <img src="motive_community_r.png" alt="community" class="motive-hover">
+        </div>
+        <div class="motive-item" data-popup="3">
+            <img src="motive_editorial.png" alt="editorial" class="motive-image">
+            <img src="motive_editorial_r.png" alt="editorial" class="motive-hover">
+        </div>
+        <div class="motive-item" data-popup="4">
+            <img src="motive_everyday.png" alt="everyday" class="motive-image">
+            <img src="motive_everyday_r.png" alt="everyday" class="motive-hover">
+        </div>
+        <div class="motive-item" data-popup="5">
+            <img src="motive_food.png" alt="food" class="motive-image">
+            <img src="motive_food_r.png" alt="food" class="motive-hover">
+        </div>
+        <div class="motive-item" data-popup="6">
+            <img src="motive_furniture.png" alt="furniture" class="motive-image">
+            <img src="motive_furniture_r.png" alt="furniture" class="motive-hover">
+        </div>
+        <div class="motive-item" data-popup="7">
+            <img src="motive_graphic.png" alt="graphic" class="motive-image">
+            <img src="motive_graphic_r.png" alt="graphic" class="motive-hover">
+        </div>
+        <div class="motive-item" data-popup="8">
+            <img src="motive_illustration.png" alt="illustration" class="motive-image">
+            <img src="motive_illustration_r.png" alt="illustration" class="motive-hover">
+        </div>
+        <div class="motive-item" data-popup="9">
+            <img src="motive_portrait.png" alt="portrait" class="motive-image">
+            <img src="motive_portrait_r.png" alt="portrait" class="motive-hover">
+        </div>
+        <div class="motive-item" data-popup="10">
+            <img src="motive_road.png" alt="road" class="motive-image">
+            <img src="motive_road_r.png" alt="road" class="motive-hover">
+        </div>
+        <div class="motive-item" data-popup="11">
+            <img src="motive_typography.png" alt="typography" class="motive-image">
+            <img src="motive_typography_r.png" alt="typography" class="motive-hover">
+        </div>
+    </div>
+
+    <div class="popup-container">
+        <img src="m_close-up.png" alt="close-up popup" class="popup-image">
+        <img src="m_collage.png" alt="collage popup" class="popup-image">
+        <img src="m_community.png" alt="community popup" class="popup-image">
+        <img src="m_editorial.png" alt="editorial popup" class="popup-image">
+        <img src="m_everyday.png" alt="everyday popup" class="popup-image">
+        <img src="m_food.png" alt="food popup" class="popup-image">
+        <img src="m_furniture.png" alt="furniture popup" class="popup-image">
+        <img src="m_graphic.png" alt="graphic popup" class="popup-image">
+        <img src="m_illustration.png" alt="illustration popup" class="popup-image">
+        <img src="m_portrait.png" alt="portrait popup" class="popup-image">
+        <img src="m_road.png" alt="road popup" class="popup-image">
+        <img src="m_typography.png" alt="typography popup" class="popup-image">
+    </div>
+
+    <a href="universe.html" class="back-container">
+        <img src="back.png" alt="back" class="back-image">
+        <img src="back_r.png" alt="back" class="back-hover">
+    </a>
+
+    <script>
+        document.querySelectorAll('.motive-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const popupIndex = parseInt(item.getAttribute('data-popup'));
+                const popupImages = document.querySelectorAll('.popup-image');
+                popupImages.forEach(img => img.style.opacity = '0');
+                popupImages[popupIndex].style.opacity = '1';
+            });
+        });
+    </script>
+</body>
+</html> 
